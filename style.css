@@ -1,0 +1,543 @@
+/* 
+    Created on : 1.11.2016, 18:39:26
+    Author     : Tonda Kozák
+*/
+
+
+/* used colors
+https://coolors.co/1d0075-c8d3f4-eec643-141414-ffffff
+rgb(29, 0, 117); main dark
+rgb(200, 211, 244); main light color
+rgb(238, 198, 67); supplement light color
+rgb(20, 20, 20); supplement dark color
+rgb(255, 255, 255); */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: rgb(200, 211, 244);
+    color: rgb(29, 0, 117);
+    font-size: 100%;
+    font-family:  Candara, Arial;
+    height: 100%;
+}
+a {
+    color: rgb(20, 20, 20);
+    text-decoration: underline; 
+}
+a:hover {
+    color: rgba(20, 20, 20, 0.8);
+    text-decoration: none;
+}
+a:visited {
+    color: rgba(20, 20, 20, 0.6);
+}
+
+p {
+    text-indent: 20px;
+    margin: 10px;
+    font-size: 110%;
+}
+h2 {
+    text-align: center;
+    margin: 0;
+}
+h2 .noActive {
+    color: grey;
+    text-decoration: none;
+}
+h2 .noActive:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.errorMessage {
+    font-weight: bold;
+    color: red;
+    border: 1px solid red;
+    border-radius: 6px;
+}
+.clear {
+    clear: both;
+}
+
+/* ****** Page block ****** */
+#block {
+    min-height: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(29, 0, 117);
+}
+
+/* *** Header **** */
+#header {
+    margin-bottom: 20px;
+}
+#header a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* H1 */
+#header h1 {
+    float: left;
+    width: 15ex;
+    text-align: center;
+    margin: 0;
+    font-size: 150%;
+}
+#header h1 a {
+    color: rgba(29, 0, 117, 1);
+    padding: 0.3ex 1ex;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#header h1 a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Navigation */
+#header ul {
+     margin:0 10px;
+     padding: 0;
+     float: right;
+     width: 60%;
+     text-align: right;
+}
+#header li {
+    display: inline-block;
+    padding: 0;
+    color: blue;
+    margin-left: 10px;
+}
+#header ul a {
+    text-align: center;
+    display: inline-block;
+    background: rgb(29, 0, 117);
+    color: rgb(238, 198, 67);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 2px  5px 0px rgba(255, 255, 255, 0.5);
+
+}
+/*#header ul a:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 1em;
+    background: yellow;
+    margin-right: 2px;
+}*/
+#header ul a:hover {
+    background: rgba(29, 0, 117, 0.8);
+    color: white;
+}
+#header .nav-hidden {
+    display: none;
+}
+
+/* *** Footer **** */
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(29, 0, 117);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+#footer a {
+    display: inline-block;
+    color: rgb(238, 198, 67);
+    font-style: italic;
+    padding: 3px 0 2px;
+}
+#footer a:hover {
+    color: rgba(238, 198, 67, 0.8); 
+}
+
+/* *** Best **** */
+.bestTable {
+    margin: 0px auto;
+    border-collapse: collapse;
+}
+.bestTable td {
+    padding: 5px;
+    font-size: 105%;
+    text-align: right
+}
+.bestTable td:nth-child(2) {
+    text-align: center;
+}
+.bestTable tr {
+    background: rgb(200, 211, 244);
+    border-bottom: 1px solid white;
+}
+.bestTable tr:hover {
+    background: rgba(200, 211, 244, 0.8);
+    border-bottom: 1px solid rgb(29, 0, 117);
+}
+.bestTable tr:nth-child(even) {
+    background: rgb(255, 255, 255);
+}
+.bestTable tr:nth-child(even):hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+.bestTable tr:first-child {
+    font-size: 112%;
+    font-weight: bold;
+}
+.bestTable tr:nth-child(2) {
+    font-size: 106%;
+    font-weight: bold;
+}
+.bestTable tr:nth-child(3) {
+    font-size: 102%;
+    font-weight: bold;
+}
+
+/* *** Other pages **** */
+#login, #best {
+    padding: 20px 0;
+    background: rgb(238, 198, 67);
+}
+#login p {
+    text-align: center;
+}
+#login p a {
+    color: white;
+    text-decoration: underline;
+}
+#login a:hover {
+    text-decoration: none;
+}
+#signup, #account {
+    padding: 20px 0;
+    background: rgb(29, 0, 117);
+    color: rgb(238, 198, 67);
+}
+#about {
+    background: white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* *** Login forms **** */
+.loginForm {
+    font-size: 120%;
+    width: 350px;
+    margin: 10px auto;
+}
+.loginForm label {
+    display: block;
+    margin: 10px 0;
+    min-height: 3ex;
+    clear: both;
+}
+.loginForm input {
+    float: right;
+    width: 200px;
+    border-radius: 6px;
+    padding: 5px;
+    border: 1px solid;
+    margin: 5px;
+}
+.loginForm a {
+    color: rgb(238, 198, 67);
+    font-weight: bold;
+    cursor: pointer;
+    clear: both;
+    display: block;
+}
+#block .invalid {
+    background: yellow;
+}
+#block .valid {
+    border: 3px solid green;
+}
+#block div.valid {
+    border: none;
+    color: green;
+    background: transparent;
+}
+#block div.invalid {
+    border: none;
+    background: transparent;
+    color: red;
+}
+.loginForm input:hover, .loginForm input:active, .loginForm input:focus {
+    box-shadow: 1px 2px  5px 0px rgba(255, 255, 255, 0.5);
+}
+
+
+/* *** Buttons **** */
+#block .button {
+    display: block;
+    float: none;
+    width: 20ex;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px  5px 0px rgba(255, 255, 255, 0.5);
+}
+#signup .button, #account .button {
+    background: rgb(238, 198, 67);
+    color: rgb(29, 0, 117);
+}
+#login .button {
+    background: rgb(29, 0, 117);
+    color: rgb(238, 198, 67);
+}
+ #block .button:hover {
+    color: white;
+}
+
+
+/* *** Showing/hidding pages **** */
+.js #block .hide {
+    padding: 0;
+    max-height: 1px;
+    overflow: hidden;
+    //animation: showPage 0.5s linear reverse;
+}
+.js #block .hidden {
+    padding: 0;
+    max-height: 0px;
+    overflow: hidden;
+    animation: hidePage 0.2s linear;
+}
+.js #block .showed {
+    //max-height: 100em;
+    animation: showPage 0.5s linear none}
+.js #block #blank.showed, .js #block #blank.hidden {
+    padding: 0;
+    height: 0;
+    background: blue;
+    animation: none;
+}
+@keyframes showPage {
+    0% {
+        max-height: 0;
+        padding-top: 0;
+    }
+    50% {
+        max-height: 250px;
+        padding-top: 20px;
+    }
+    100% {
+        max-height: 1000px;
+        padding-top: 20px;
+    }
+}
+
+@keyframes hidePage {
+    0% {
+        max-height: 1000px;
+        padding-top: 20px;
+    }
+    50% {
+        max-height: 250px;
+        padding-top: 0px;
+    }
+    100% {
+        max-height: 0;
+        padding-top: 0;
+    }
+}
+
+
+
+/* *************** game *************** */
+
+#gameField {
+    border: 1px solid black;
+    height: 0;
+    padding-bottom: 62.5%;
+    background: rgba(0, 0, 0, 0.9);
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    position: relative;
+    max-height: 100%;
+    overflow: hidden;    
+}
+#canvasGame, #gameStartPage, #gamePage, #gameDefaultPage, #gameEndPage, .canvasGame {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(220, 220, 220);  
+}
+
+/* *** Labels **** */
+.gameTopLabels {
+    position: absolute;
+    top: 0;
+    background: rgba(120, 120, 120, 0.6);
+    padding: 5px 10px;
+    //height: 2em;
+    width: 25%;
+    min-width: 30ex;
+    color: rgb(29, 0, 117);
+    font-weight: bold;
+    font-size: 120%;
+}
+#gameLabelLeft {
+    left: 0;
+    border-radius: 0 0 10px 0;
+}
+#gameLabelRight {
+    right: 0;
+    text-align: right;
+    border-radius: 0 0 0 10px;
+}
+
+#gameMetres {
+    padding-left: 20px;
+    width: 3ex;
+    text-align: right;
+}
+#gamePlayPause, #gameFullScreen {
+    user-select: none;
+    cursor: pointer;
+}
+#gameLives {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: url("img/ball.png") center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+}
+
+/* *** pedals **** */
+.gameControls {
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+    height: 140px;
+    background: url("img/pedal.png") center center no-repeat;
+    background-size: contain;
+    // prevent 300ms delay
+    -ms-touch-action: manipulation;	/* IE10  */
+    touch-action: manipulation;		/* IE11+ */
+}
+.gameControlsActive {
+    background: url("img/pedal-active.png") center center no-repeat;
+}
+#gameControlLeft {
+    left: 10px;
+}
+#gameControlRight {
+    right: 10px;
+}
+
+
+
+#gameStartPage {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* *** Two collums **** */
+.cover {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.cover:before {
+    content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+}
+.left {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    font-size: 120%;
+}
+.right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    height: 8ex;
+    line-height: 8ex;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+#gameBuyingBuyButton {
+    border: 1px solid brown;
+    cursor: pointer;
+}
+#gameBuyingBuyButton div:first-child {
+    width: 100px;
+    height: 100px;
+    background: url("img/ball.png") center center no-repeat;
+    background-size: contain;
+    margin: auto;
+}
+#gameBuyingBuyButton div:nth-child(2) {
+    position: relative;
+    top: -25px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 50%;
+    min-width: 10ex;
+    border-radius: 10px;
+    margin: auto;
+    font-weight: bold;
+}
+
+/* *** Buttons **** */
+#gameField .button {
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    font-size: 120%;
+    width: 20ex;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px  5px 0px rgba(255, 255, 255, 0.5);    
+    background: rgb(29, 0, 117);
+    color: rgb(238, 198, 67);
+}
+#gameField .button:hover {
+    color: white;
+}
+#gameDefaultStartButton {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* *** End page **** */
+#gameEndPage .left {
+    text-align: left;
+    padding: 10px;
+    font-size: 120%;
+    border: 1px solid rgb(29, 0, 117);
+    border-radius: 10px;
+    line-height: 3ex;
+}
+#gameEndPage .right {
+    vertical-align: text-bottom;
+}
+
