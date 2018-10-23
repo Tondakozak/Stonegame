@@ -8,8 +8,8 @@ Web game written in a pure JavaScript.
 The project requirements said that the logging and user registrations must be done using HTML5 LocalStorage API.
 
 Extract from the project requirements:
-- bsite that enables the user to play a game. 
-- e user plays the game alone or against the computer. 
+- Website that enables the user to play a game. 
+- The user plays the game alone or against the computer. 
 - If the user plays against the computer, there are no extra marks for sophisticated artificial intelligence: simple random choices are fine. 
 - The game must be implemented in HTML, CSS, JavaScript and PHP. 
 - Extra marks are available for games with more sophisticated functionality. 
